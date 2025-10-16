@@ -10,7 +10,7 @@ for (let i = 0; i < numStars; i++) {
   document.body.appendChild(star);
 }
 
-// Add moon if not already present
+// Add moon 
 if (!document.querySelector('.moon')) {
   const moon = document.createElement('div');
   moon.classList.add('moon');
@@ -19,6 +19,7 @@ if (!document.querySelector('.moon')) {
 
 const numClouds = 3;
 
+// Clouds
 for (let i = 0; i < numClouds; i++) {
   const cloud = document.createElement('div');
   cloud.classList.add('cloud');
@@ -28,6 +29,7 @@ for (let i = 0; i < numClouds; i++) {
   document.body.appendChild(cloud);
 }
 
+// Shooting star
 setInterval(() => {
   const shoot = document.createElement('div');
   shoot.classList.add('shooting-star');
@@ -41,8 +43,8 @@ setInterval(() => {
 document.addEventListener('DOMContentLoaded', () => {
   const bgMusic = document.getElementById('bg-music');
 
-  // Attempt autoplay (muted first)
-  bgMusic.volume = 0.3; // adjust volume (0.0 - 1.0)
+  // Autoplay BG music
+  bgMusic.volume = 0.3; 
   bgMusic.play().catch(() => {
     // If autoplay is blocked, show a play button
     const musicBtn = document.createElement('button');

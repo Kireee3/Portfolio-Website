@@ -139,7 +139,7 @@ h2 { font-size: 0.8rem; color: #8fbaff; margin-bottom: 40px; }
   z-index: 10;
   pointer-events: none;
   animation: float 3s ease-in-out infinite, borderGlow 2.5s ease-in-out infinite;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); /* optional soft glow */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); /* soft glow */
   mix-blend-mode: lighten;
 }
 
@@ -336,7 +336,6 @@ body.home {
   scrollbar-color: #777 #111;
 }
 
-/* For WebKit browsers (Chrome, Edge, Opera, etc.) */
 .window-body::-webkit-scrollbar {
   width: 6px;
 }
