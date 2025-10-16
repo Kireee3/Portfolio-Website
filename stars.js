@@ -16,3 +16,43 @@ if (!document.querySelector('.moon')) {
   moon.classList.add('moon');
   document.body.appendChild(moon);
 }
+
+const numClouds = 3;
+
+for (let i = 0; i < numClouds; i++) {
+  const cloud = document.createElement('div');
+  cloud.classList.add('cloud');
+  cloud.style.top = `${Math.random() * 50}vh`;
+  cloud.style.left = `${Math.random() * 100}vw`;
+  cloud.style.animationDelay = `${Math.random() * 10}s`;
+  document.body.appendChild(cloud);
+}
+
+setInterval(() => {
+  const shoot = document.createElement('div');
+  shoot.classList.add('shooting-star');
+  shoot.style.top = `${Math.random() * 50}vh`;
+  shoot.style.left = `${Math.random() * 100}vw`;
+  document.body.appendChild(shoot);
+
+  setTimeout(() => shoot.remove(), 2000);
+}, 4000);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const bgMusic = document.getElementById('bg-music');
+
+  // Attempt autoplay (muted first)
+  bgMusic.volume = 0.3; // adjust volume (0.0 - 1.0)
+  bgMusic.play().catch(() => {
+    // If autoplay is blocked, show a play button
+    const musicBtn = document.createElement('button');
+    musicBtn.textContent = '🎵 Play Music';
+    musicBtn.classList.add('music-btn');
+    document.body.appendChild(musicBtn);
+
+    musicBtn.addEventListener('click', () => {
+      bgMusic.play();
+      musicBtn.remove();
+    });
+  });
+});

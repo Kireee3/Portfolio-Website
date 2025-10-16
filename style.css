@@ -35,6 +35,44 @@ body {
   margin-bottom: 40px;
 }
 
+.cloud {
+  position: fixed;
+  width: 200px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  filter: blur(20px);
+  animation: moveClouds 60s linear infinite;
+}
+
+@keyframes moveClouds {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(110vw); }
+}
+
+.shooting-star {
+  position: fixed;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(315deg, white, transparent);
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation: shoot-left 2s ease-out forwards;
+  filter: drop-shadow(0 0 6px white);
+  z-index: 1;
+}
+
+@keyframes shoot-left {
+  from {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-200px, 200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
 h1, h2 { text-align: center; }
 h1 { font-size: 2rem; color: #cbe3ff; text-shadow: 0 0 10px #4da6ff; }
 h2 { font-size: 0.8rem; color: #8fbaff; margin-bottom: 40px; }
@@ -89,6 +127,55 @@ h2 { font-size: 0.8rem; color: #8fbaff; margin-bottom: 40px; }
 }
 
 /* Home Page */
+.avatar-gif {
+  position: fixed;
+  bottom: 10px;
+  right: -80px;
+  width: 550px;
+  height: auto;
+  border-radius: 50%;
+  padding: 5px;
+  border: 6px solid rgba(255, 255, 255, 0.3); /* thin glowing border */
+  z-index: 10;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite, borderGlow 2.5s ease-in-out infinite;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); /* optional soft glow */
+  mix-blend-mode: lighten;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Gentle floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.speech-bubble {
+  position: fixed;
+  bottom: 410px;
+  right: 60px;   
+  width: 310px;  
+  height: auto;
+  z-index: 11;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+  mix-blend-mode: lighten;
+}
 
 body.home {
   margin: 0;
@@ -145,7 +232,7 @@ body.home {
 .folder.subfolder {
   text-align: center;
   cursor: pointer;
-  width: 90px; /* fixed width to make them uniform */
+  width: 90px; 
   word-wrap: break-word;
   overflow-wrap: break-word;
   display: flex;
@@ -162,12 +249,15 @@ body.home {
 
 .folder.subfolder p {
   font-size: 8px;
-  line-height: 1.4;
+  line-height: 1.8;
   color: #b0c9ff;
   text-shadow: 1px 1px 2px #000;
   margin: 0;
-  word-break: break-word;
+  max-width: 100px;
   text-align: center;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Windows */
@@ -239,10 +329,27 @@ body.home {
 }
 
 .window-body {
-  padding: 20px;
-  font-size: 10px;
+  max-height: 400px; 
   overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #777 #111;
 }
+
+/* For WebKit browsers (Chrome, Edge, Opera, etc.) */
+.window-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.window-body::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 10px;
+}
+
+.window-body::-webkit-scrollbar-track {
+  background: #111;
+}
+
 
 .hidden {
   display: none;
@@ -250,6 +357,16 @@ body.home {
 
 .visible {
   display: flex;
+}
+
+.profile-pic {
+  width: 140px;            
+  height: 140px;            
+  border-radius: 50%;       
+  object-fit: cover;        
+  margin-bottom: 15px;
+  border: 2px solid #b0c9ff; 
+  box-shadow: 0 0 8px rgba(176, 201, 255, 0.6);
 }
 
 .project-list {
@@ -262,28 +379,25 @@ body.home {
 }
 
 .project-content {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 10px;
+  gap: 15px;
 }
 
-.project-content img {
-  width: 200px;
-  height: 120px;
-  border: 2px solid #444;
-  border-radius: 6px;
-  background-color: #111;
-  image-rendering: pixelated;
-  box-shadow: 0 0 5px #000;
-  animation: popIn 0.4s ease;
-  align-self: center;
+.project-content img.project-image {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 .project-content p {
   font-size: 10px;
-  line-height: 1.4;
+  line-height: 1.8;
   color: #ddd;
   width: 80%;
   text-align: justify;
