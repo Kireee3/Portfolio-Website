@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Erik James Medallada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+  <!-- Moon -->
+  <div class="moon top-right"></div>
+
+  <!-- Folders -->
+  <div class="desktop">
+    <div class="folder" data-window="about">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>About Me</p>
+    </div>
+
+    <div class="folder" data-window="background">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Background</p>
+    </div>
+
+    <div class="folder" data-window="projects">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Projects</p>
+    </div>
+  </div>
+
+  <!-- About me main window -->
+  <div id="about" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">/About Me</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-list">
+    <div class="folder subfolder" data-window="profile">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Profile</p>
+    </div>
+    <div class="folder subfolder" data-window="description">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Description</p>
+    </div>
+    <div class="folder subfolder" data-window="contacts">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Contacts</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- Profile window -->
+<div id="profile" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Profile.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+
+  <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="profile icon" style="width:80px; margin-bottom:15px;">
+      <p><b>Full Name: Erik James S. Medallada</b><br><br>
+      <b>Age: 20</b><br><br>
+      <b>Birthdate: April 7, 2005</b><br><br>
+      <b>Location: Parañaque City, Metro Manila, Philippines</b><br><br>
+      <b>Education: Technological University of the Philippines – Manila</b><br><br>
+      <b>Course: Bachelor of Science in Computer Science </b><br><br>
+      <b>Year Level: Junior</b><br></p>
+  </div>
+</div>
+
+  <!-- Description window -->
+<div id="description" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Description.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+  <div class="window-body project-content">
+    <br>
+    <p>
+      Hi! I'm <b>Erik James Medallada</b>, a junior <b>Computer Science student</b> at <b>Technological University of the Philippines – Manila</b>.
+      I’m always eager to learn new technologies, explore innovative solutions, and build projects that make a real impact.
+      My approach to tech is guided by curiosity, creativity, and the belief that consistent learning is the key to growth.
+    </p>
+    <p>
+      As a learner and leader, I always strive to connect with others and create opportunities for shared learning. I’m passionate about <b>data science, problem-solving, and building systems that make an impact</b>.  
+      My goal is to continuously grow — both technically and personally — while helping others do the same.
+    </p>
+  </div>
+</div>
+
+<!-- Contacts window -->
+<div id="contacts" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Contacts.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+
+  <div class="window-body project-content">
+  <p>
+    <br><br>
+    <b>Email:</b> <a href="mailto:ejmedallada@gmail.com">ejmedallada@gmail.com</a><br><br>
+
+    <b>Facebook:</b> <a href="https://www.facebook.com/erik.medallada" target="_blank">facebook.com/erik.medallada</a><br><br>
+
+    <b>Instagram:</b> <a href="https://www.instagram.com/kireeeeee?igsh=MW94MGJzOG05OHI5bQ==" target="_blank">@kireeeeee</a><br><br>
+
+    <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/erik-james-medallada-9607ba370" target="_blank">linkedin.com/in/erik-james-medallada</a><br><br>
+
+    <b>GitHub:</b> <a href="https://github.com/Kireee3" target="_blank">github.com/Kireee3</a>
+  </p>
+</div>
+
+</div>
+
+  <!-- Background main window -->
+<div id="background" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">/Background</span>
+    <button class="close-btn">✖</button>
+  </div>
+  <div class="window-body project-list">
+    <div class="folder subfolder" data-window="education">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Education</p>
+    </div>
+    <div class="folder subfolder" data-window="organization">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Organization</p>
+    </div>
+    <div class="folder subfolder" data-window="Contact">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+      <p>Skills</p>
+    </div>
+  </div>
+</div>
+
+<!-- Education window -->
+<div id="education" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Education.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+  <div class="window-body project-content">
+    <br>
+    <p><b>Technological University of the Philippines - Manila</b><br>
+    2023 – Present<br>
+    Bachelor of Science in Computer Science</p>
+    <br>
+    <p><b>Parañaque National High School – Main</b><br>
+    <i> · Senior High School (STEM Strand)</i> — 2021–2023<br>
+    <b> · With High Honors</b></p>
+    <br>
+    <p><i> · Junior High School (STE Program)</i> — 2017–2021<br>
+    <b> · With High Honors</b></p>
+    <br>
+    <p><b>San Dionisio Elementary School</b><br>
+    2011–2017</p>
+  </div>
+</div>
+
+
+<!-- Organization window -->
+<div id="organization" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Organization.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+  <div class="window-body project-content">
+    <br>
+    <p><b>TUP-M DOST Scholars' Club</b><br>
+    <i> · Junior Secretary</i> — 2025–Present<br>
+    <i> · Academics Committee Head</i> — 2024–2025<br>
+    <i> · Academics Committee Member</i> — 2023–2024<br>
+    </p>
+    <br>
+    <p><b>START - DOST</b><br>
+    <b>(Scholars Transforming Advancement and Research for Technology)</b>
+    <br>
+    <br>
+    <i> · Program Manager</i> — 2025–Present<br>
+    </p>
+  </div>
+</div>
+
+<!-- Skills window -->
+<div id="skills" class="window hidden">
+  <div class="window-header">
+    <span class="window-title">Skills.txt</span>
+    <button class="close-btn">✖</button>
+  </div>
+  <div class="window-body project-content">
+    <br>
+    <p><b>Technical Skills</b><br>
+    <i> · Programming Languages: Python, C++</i><br>
+    <i> · Web Development: HTML, CSS, JavaScript</i><br>
+    <i> · Database Management: MySQL, SQLite</i><br>
+    <i> · Data Analysis and Visualization</i><br>
+    <br>
+    <p><b>Soft Skills</b><br>
+    <i> · Adaptability and Problem Solving</i><br>
+    <i> · Continuous Learning Mindset</i><br>
+    <i> · Leadership and Collaboration</i><br>
+    <i> · Time Management</i><br>
+  </div>
+</div>
+
+  <!-- Projects main window -->
+  <div id="projects" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">/Projects</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-list">
+      <div class="folder subfolder" data-window="project1">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>ATM Simulation</p>
+      </div>
+      <div class="folder subfolder" data-window="project2">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>2048 Game</p>
+      </div>
+      <div class="folder subfolder" data-window="project3">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>RPS AI Trainer</p>
+      </div>
+      <div class="folder subfolder" data-window="project4">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>BRIGHT</p>
+      </div>
+      <div class="folder subfolder" data-window="project5">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>Touchless Presentation Control</p>
+      </div>
+      <div class="folder subfolder" data-window="project6">
+        <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="folder">
+        <p>Synthetic Human Image Detection</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Individual project windows -->
+  <div id="project1" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">ATM_Simulation.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="ATM Simulation Preview">
+    <p>A simple ATM simulation system built using C++ for our Data Structures and Algorithms subject. It allows users to check balance, withdraw, and deposit funds in a simulated banking interface using a flashdrive as the card.</p>
+    </div>
+  </div>
+
+  <div id="project2" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">2048 Game.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="2048 Game Preview">
+    <p>A clone of the classic 2048 puzzle game built using Java. Combines tiles to reach the 2048 tile with responsive keyboard controls.</p>
+    </div>
+  </div>
+
+  <div id="project3" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Rock-Paper-Scissor AI.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="RPS AI Trainer">
+    <p>A machine learning-powered Rock Paper Scissors game that learns your move patterns and adapts over time to predict your next move.</p>
+    </div>
+  </div>
+
+  <div id="project4" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">BRIGHT.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="BRIGHT Project">
+    <p>BRIGHT: Budget Record Integrity using Generalized Hash-based Transparency is a web-based budget management for student organizations that ensures transparency, accountability, and trust in financial transactions.</p>
+    </div>
+  </div>
+ 
+  <div id="project5" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Touchless Presentation Control.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Touchless Presentation Control">
+    <p>A gesture-controlled presentation tool using computer vision to change slides without physical input devices — ideal for hygienic, contactless use.</p>
+    </div>
+  </div>
+
+  <div id="project6" class="window hidden">
+    <div class="window-header">
+      <span class="window-title">Synthetic Human Image Detection.exe</span>
+      <button class="close-btn">✖</button>
+    </div>
+    <div class="window-body project-content">
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="AI Detection">
+    <p>An anomaly-based machine learning model that uses real full-body human datasets to detect anomalies in input images that deviate from real human patterns.</p>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="left-section">
+      <button class="start-btn" onclick="window.location.href='index.html'">⏻</button>
+      <span class="hint">← Go back to the starting screen</span>
+    </div>
+    <div class="datetime" id="datetime"></div>
+  </div>
+
+  <script src="stars.js"></script>
+
+  <script>
+    // Folder click opens window
+    const folders = document.querySelectorAll('.folder');
+    const windows = document.querySelectorAll('.window');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    let zIndexCounter = 100; // start z-index count for windows
+
+    folders.forEach(folder => {
+      folder.addEventListener('click', () => {
+        const target = document.getElementById(folder.dataset.window);
+        if (target) {
+          // Bring to front
+          zIndexCounter++;
+          target.style.zIndex = zIndexCounter;
+
+          // Animate open
+          target.classList.remove('hidden', 'closing');
+          target.classList.add('visible');
+        }
+      });
+    });
+
+    closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const win = btn.closest('.window');
+      win.classList.remove('visible');
+      win.classList.add('closing');
+
+      // After animation, hide
+      setTimeout(() => {
+        win.classList.remove('closing');
+        win.classList.add('hidden');
+      }, 300);
+    });
+  });
+
+  // Make all windows draggable
+  const draggableWindows = document.querySelectorAll('.window');
+
+  draggableWindows.forEach(win => {
+    const header = win.querySelector('.window-header');
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    header.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - win.offsetLeft;
+      offsetY = e.clientY - win.offsetTop;
+      win.style.zIndex = 1000; // bring to front
+      win.classList.add('dragging');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+        win.style.left = `${e.clientX - offsetX}px`;
+        win.style.top = `${e.clientY - offsetY}px`;
+        win.style.position = 'absolute';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        win.classList.remove('dragging');
+      }
+    });
+
+    // Also bring window to front when clicked (even if not dragged)
+    win.addEventListener('mousedown', () => {
+      zIndexCounter++;
+      win.style.zIndex = zIndexCounter;
+    });
+  });
+  
+    // Live date and time
+    function updateDateTime() {
+      const now = new Date();
+      const options = { hour: '2-digit', minute: '2-digit' };
+      const time = now.toLocaleTimeString([], options);
+      const date = now.toLocaleDateString();
+      document.getElementById('datetime').textContent = `${date} ${time}`;
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+  </script>
+</body>
+</html>
